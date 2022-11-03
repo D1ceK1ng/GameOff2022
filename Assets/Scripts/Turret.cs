@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    private List<Transform> enemyList = new List<Transform>();
+    private List<Transform> _enemyList = new List<Transform>();
 
 
 
@@ -19,7 +19,7 @@ public class Turret : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.TryGetComponent<Enemy>(out Enemy _enemy))
-            enemyList.Add(_enemy.transform);
+            _enemyList.Add(_enemy.transform);
         
     }
 
@@ -27,6 +27,6 @@ public class Turret : MonoBehaviour
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.TryGetComponent<Enemy>(out Enemy _enemy))
-            enemyList.Remove(_enemy.transform);
+            _enemyList.Remove(_enemy.transform);
     }
 }

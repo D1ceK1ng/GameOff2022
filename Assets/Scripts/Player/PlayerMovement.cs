@@ -6,19 +6,19 @@ public class PlayerMovement : MonoBehaviour
 {
     public bool CanMove = true;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D _rigidBody;
 
-    private float horizontal, vertical;
+    private float _horizontal, _vertical;
 
     //Limits diagnol movement
-    private float moveLimiter = 0.7f;
+    private float _moveLimiter = 0.7f;
 
     public float MoveSpeed;
 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -40,8 +40,8 @@ public class PlayerMovement : MonoBehaviour
     private void PlayerInput()
     {
         // Gives a value between -1 and 1
-        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        _horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+        _vertical = Input.GetAxisRaw("Vertical"); // -1 is down
     }
 
 
@@ -49,18 +49,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if (CanMove)
         {
-            if (horizontal != 0 && vertical != 0) // Check for diagonal movement
+            if (_horizontal != 0 && _vertical != 0) // Check for diagonal movement
             {
                 // limit movement speed diagonally, so you move at 70% speed
-                horizontal *= moveLimiter;
-                vertical *= moveLimiter;
+                _horizontal *= _moveLimiter;
+                _vertical *= _moveLimiter;
             }
 
-            Vector2 newVel = new Vector2(horizontal * MoveSpeed, vertical * MoveSpeed);
+            Vector2 newVel = new Vector2(_horizontal * MoveSpeed, _vertical * MoveSpeed);
 
             if (newVel != Vector2.zero)
             {
-                rb.AddForce(newVel);
+                _rigidBody.AddForce(newVel);
             }
         }
     }

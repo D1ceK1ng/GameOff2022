@@ -8,10 +8,10 @@ public class PickupScrap : MonoBehaviour
 
     public KeyCode PickupKey = KeyCode.F;
 
-    [SerializeField] private List<Transform> scrapList = new List<Transform>();
+    [SerializeField] private List<Transform> _scrapList = new List<Transform>();
 
-    private Transform grabbedScrap;
-    [SerializeField] private Transform player;
+    private Transform _grabbedScrap;
+    [SerializeField] private Transform _player;
 
 
 
@@ -20,7 +20,7 @@ public class PickupScrap : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.TryGetComponent<Grabbable>(out Grabbable _grabbable))
-            scrapList.Add(col.transform);
+            _scrapList.Add(col.transform);
 
         CheckBool();
     }
@@ -28,7 +28,7 @@ public class PickupScrap : MonoBehaviour
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.TryGetComponent<Grabbable>(out Grabbable _grabbable))
-            scrapList.Remove(col.transform);
+            _scrapList.Remove(col.transform);
 
         CheckBool();
     }
@@ -36,7 +36,7 @@ public class PickupScrap : MonoBehaviour
     private void CheckBool()
     {
         //If list is != 0, touchingScrap is true
-        TouchingScrap = scrapList.Count != 0;
+        TouchingScrap = _scrapList.Count != 0;
     }
 
 
@@ -60,13 +60,13 @@ public class PickupScrap : MonoBehaviour
     {
         HoldingScrap = true;
 
-        grabbedScrap = scrapList[0];
-        grabbedScrap.SetParent(transform);
-        grabbedScrap.GetComponent<Rigidbody2D>().simulated = false;
-        grabbedScrap.GetComponent<BoxCollider2D>().enabled = false;
-        grabbedScrap.position = transform.position;
+        _grabbedScrap = _scrapList[0];
+        _grabbedScrap.SetParent(transform);
+        _grabbedScrap.GetComponent<Rigidbody2D>().simulated = false;
+        _grabbedScrap.GetComponent<BoxCollider2D>().enabled = false;
+        _grabbedScrap.position = transform.position;
 
-        player.GetComponent<Rigidbody2D>().mass += grabbedScrap.GetComponent<Rigidbody2D>().mass;
+        _player.GetComponent<Rigidbody2D>().mass += _grabbedScrap.GetComponent<Rigidbody2D>().mass;
     }
 
 
@@ -75,9 +75,9 @@ public class PickupScrap : MonoBehaviour
     {
         HoldingScrap = false;
 
-        player.GetComponent<Rigidbody2D>().mass -= grabbedScrap.GetComponent<Rigidbody2D>().mass;
-        grabbedScrap.SetParent(null);
-        grabbedScrap.GetComponent<Rigidbody2D>().simulated = true;
-        grabbedScrap.GetComponent<BoxCollider2D>().enabled = true;
+        _player.GetComponent<Rigidbody2D>().mass -= _grabbedScrap.GetComponent<Rigidbody2D>().mass;
+        _grabbedScrap.SetParent(null);
+        _grabbedScrap.GetComponent<Rigidbody2D>().simulated = true;
+        _grabbedScrap.GetComponent<BoxCollider2D>().enabled = true;
     }
 }
