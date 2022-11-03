@@ -5,13 +5,16 @@ using UnityEngine;
 public class PickupScrap : MonoBehaviour
 {
     public bool TouchingScrap = false, HoldingScrap = false;
+    public int _maxAmountOfScrapHeld = 1;
+    private int _amountOfScrapHeld = 0;
 
-    public KeyCode PickupKey = KeyCode.F;
+    public KeyCode PickupKey = KeyCode.E, DropKey = KeyCode.F;
 
     [SerializeField] private List<Transform> _scrapList = new List<Transform>();
 
-    private Transform _grabbedScrap;
+    [SerializeField] private List<Transform> _grabbedScrapList = new List<Transform>();
     [SerializeField] private Transform _player;
+    [SerializeField] private LayerMask _scrapLayer, _environmentLayer;
 
 
 
@@ -45,11 +48,11 @@ public class PickupScrap : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(PickupKey) && !HoldingScrap && TouchingScrap)
+        if (Input.GetKeyDown(PickupKey) && _amountOfScrapHeld < _maxAmountOfScrapHeld && TouchingScrap)
         {
             GrabScrap();
         }
-        else if (Input.GetKeyDown(PickupKey) && HoldingScrap)
+        else if (Input.GetKeyDown(DropKey) && HoldingScrap)
         {
             DropScrap();
         }
@@ -59,25 +62,32 @@ public class PickupScrap : MonoBehaviour
     private void GrabScrap()
     {
         HoldingScrap = true;
+        _amountOfScrapHeld++;
 
-        _grabbedScrap = _scrapList[0];
-        _grabbedScrap.SetParent(transform);
-        _grabbedScrap.GetComponent<Rigidbody2D>().simulated = false;
-        _grabbedScrap.GetComponent<BoxCollider2D>().enabled = false;
-        _grabbedScrap.position = transform.position;
+        _grabbedScrapList.Add(_scrapList[0]);
+        SpringJoint2D _joint = _scrapList[0].gameObject.AddComponent<SpringJoint2D>();
+        _joint.connectedBody = _player.GetComponent<Rigidbody2D>();
+        
+        //Turns Layer's value from Binary to Numerical
+        _scrapList[0].gameObject.layer = (int)Mathf.Log(_scrapLayer.value, 2); ;
 
-        _player.GetComponent<Rigidbody2D>().mass += _grabbedScrap.GetComponent<Rigidbody2D>().mass;
+
+        _scrapList.Remove(_scrapList[0]);
     }
 
 
 
     private void DropScrap()
     {
-        HoldingScrap = false;
+        _amountOfScrapHeld--;
 
-        _player.GetComponent<Rigidbody2D>().mass -= _grabbedScrap.GetComponent<Rigidbody2D>().mass;
-        _grabbedScrap.SetParent(null);
-        _grabbedScrap.GetComponent<Rigidbody2D>().simulated = true;
-        _grabbedScrap.GetComponent<BoxCollider2D>().enabled = true;
+        if (_amountOfScrapHeld == 0)
+            HoldingScrap = false;
+
+        Destroy(_grabbedScrapList[0].GetComponent<SpringJoint2D>());
+        _grabbedScrapList[_grabbedScrapList.Count - 1].gameObject.layer = (int)Mathf.Log(_environmentLayer.value, 2); ;
+
+
+        _grabbedScrapList.Remove(_grabbedScrapList[0]);
     }
 }
