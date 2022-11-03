@@ -1157,10 +1157,10 @@ MonoBehaviour:
   _scrapList: []
   _grabbedScrapList: []
   _player: {fileID: 1103481377}
-  _scrap:
+  _scrapLayer:
     serializedVersion: 2
     m_Bits: 64
-  _environment:
+  _environmentLayer:
     serializedVersion: 2
     m_Bits: 128
 --- !u!61 &750969156

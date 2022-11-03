@@ -69,7 +69,7 @@ public class PickupScrap : MonoBehaviour
         _joint.connectedBody = _player.GetComponent<Rigidbody2D>();
         
         //Turns Layer's value from Binary to Numerical
-        _scrapList[0].gameObject.layer = (int)Mathf.Log(_scrapLayer.value, 2); ;
+        _scrapList[0].gameObject.layer = (int)Mathf.Log(_scrapLayer.value, 2);
 
 
         _scrapList.Remove(_scrapList[0]);
