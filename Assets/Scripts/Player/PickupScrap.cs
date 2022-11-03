@@ -21,16 +21,16 @@ public class PickupScrap : MonoBehaviour
     {
         if (col.TryGetComponent<Grabbable>(out Grabbable _grabbable))
             _scrapList.Add(col.transform);
+            CheckBool();
 
-        CheckBool();
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.TryGetComponent<Grabbable>(out Grabbable _grabbable))
             _scrapList.Remove(col.transform);
+            CheckBool();
 
-        CheckBool();
     }
 
     private void CheckBool()
