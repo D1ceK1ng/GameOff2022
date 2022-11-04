@@ -9,19 +9,37 @@ public class Turret : MonoBehaviour
 
 
 
+    [SerializeField] private int _amountOfAmmo;
+    [SerializeField] private float _startTimeBetweenShots;
+    private float _timeBetweenShots;
+
+    [SerializeField] private GameObject _bullet;
+    [SerializeField] private Transform _shootPoint;
+
+
+
 
     //Idle animation
-    //Find Tagret
-    //Look at target
     //Shoot
     //Bullets track enemies?
 
+
+    private void Start()
+    {
+        _timeBetweenShots = _startTimeBetweenShots;
+    }
 
 
     private void Update()
     {
         if (_enemyList.Count > 0)
             RotateTowardsEnemy();
+
+        if (_amountOfAmmo > 0 && _timeBetweenShots > 0)
+            _timeBetweenShots -= Time.deltaTime;
+
+        if (_enemyList.Count > 0 && _timeBetweenShots <= 0 && _amountOfAmmo > 0)
+            Shoot();
     }
 
 
@@ -58,4 +76,19 @@ public class Turret : MonoBehaviour
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, _speed * Time.deltaTime);
     }
+
+
+
+    private void Shoot()
+    {
+        GameObject _spawnedBullet = Instantiate(_bullet, _shootPoint.position, Quaternion.identity);
+        _spawnedBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * 30f, ForceMode2D.Impulse);
+        _timeBetweenShots = _startTimeBetweenShots;
+        _amountOfAmmo --;
+    }
+
+    //Raycast to see if Turret has line of sight
+    //Wait to fire until aiming at it
+    //Make bullets follow
+    //Recoil
 }
