@@ -2295,8 +2295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7786c326c3e652a418614f43e686d366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanShoot: 1
+  CanRotate: 1
   _speed: 200
   _amountOfAmmo: 5
   _startTimeBetweenShots: 2
+  _accuracyBeforeShooting: 1
   _bullet: {fileID: 7623583122655989250, guid: d28ba84021c573f408e41dd0b064188c, type: 3}
   _shootPoint: {fileID: 1015475513}
