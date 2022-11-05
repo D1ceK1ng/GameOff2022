@@ -84,10 +84,12 @@ public class PickupScrap : MonoBehaviour
         if (_amountOfScrapHeld == 0)
             HoldingScrap = false;
 
-        Destroy(_grabbedScrapList[0].GetComponent<SpringJoint2D>());
-        _grabbedScrapList[_grabbedScrapList.Count - 1].gameObject.layer = (int)Mathf.Log(_environmentLayer.value, 2); ;
+        int i = _grabbedScrapList.Count - 1;
+
+        Destroy(_grabbedScrapList[i].GetComponent<SpringJoint2D>());
+        _grabbedScrapList[i].gameObject.layer = (int)Mathf.Log(_environmentLayer.value, 2); ;
 
 
-        _grabbedScrapList.Remove(_grabbedScrapList[0]);
+        _grabbedScrapList.Remove(_grabbedScrapList[i]);
     }
 }
