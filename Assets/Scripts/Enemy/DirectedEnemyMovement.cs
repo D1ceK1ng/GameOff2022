@@ -12,7 +12,8 @@ public class DirectedEnemyMovement : IMovable
     public void Move()
     {
         CalculateMovementDirection();
-        CurrentTransform.position = (Vector2)CurrentTransform.position + _enemyDirection * Speed * Time.deltaTime;
+        //CurrentTransform.position = (Vector2)CurrentTransform.position + _enemyDirection * Speed * Time.deltaTime;
+        _rigidbody2D.AddForce(_enemyDirection * Speed);
     }
     public DirectedEnemyMovement(Transform enemyPoint, Transform target, float speed,Rigidbody2D rigidbody2D)
     {

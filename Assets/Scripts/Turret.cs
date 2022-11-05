@@ -22,11 +22,6 @@ public class Turret : MonoBehaviour
 
 
 
-    //Idle animation
-    //Shoot
-    //Bullets track enemies?
-
-
     private void Start()
     {
         _timeBetweenShots = _startTimeBetweenShots;

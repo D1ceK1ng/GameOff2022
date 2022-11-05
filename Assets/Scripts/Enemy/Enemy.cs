@@ -20,7 +20,7 @@ public abstract class Enemy : MonoBehaviour
     {
         _player = FindObjectOfType<Player>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         _movable.Move();
     }
