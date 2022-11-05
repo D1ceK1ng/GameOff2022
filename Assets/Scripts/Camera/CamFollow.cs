@@ -12,7 +12,7 @@ public class CamFollow : MonoBehaviour
 
     void Start()
     {
-        transform.position = _player.position;
+        transform.position = Player.position;
     }
 
     void FixedUpdate()

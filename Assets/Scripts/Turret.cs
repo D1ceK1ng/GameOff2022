@@ -165,25 +165,4 @@ public class Turret : MonoBehaviour
        
         return discriminant > 0 ? 2 : 1;
     }
-
-    //Make bullets follow
-    //Recoil
 }
-
-
-
-
-/*
-        float _angle;
-
-        if (InterceptionDirection(_enemyList[0].position, transform.position, _enemyList[0].GetComponent<Rigidbody2D>().velocity, _bulletSpeed, out var direction))
-        {
-            _angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-            Debug.Log("new");
-        }
-        else
-        {
-            _angle = Mathf.Atan2(_target.y, _target.x) * Mathf.Rad2Deg;
-        }
-*/
