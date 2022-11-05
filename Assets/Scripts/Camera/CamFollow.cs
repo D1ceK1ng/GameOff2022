@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamFollow : MonoBehaviour
 {
-    [SerializeField] private Transform _player;
+    public Transform Player;
     private Vector3 _offset = new Vector3(0, 0, -20);
     [SerializeField] private float _smoothSpeed = 0.1f;
 
@@ -17,7 +17,7 @@ public class CamFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 desiredPosition = _player.position + _offset;
+        Vector3 desiredPosition = Player.position + _offset;
         Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref Velocity, _smoothSpeed);
 
         transform.position = smoothedPosition;

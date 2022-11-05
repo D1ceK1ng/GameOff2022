@@ -1,67 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class PlayerMovement : MonoBehaviour
+using UnityEngine.InputSystem;
+public class PlayerMovement : IMovable
 {
-    public bool CanMove = true;
+    private Rigidbody2D _rigidbody2D;
+    private PlayerController _playerInput;
+    private Vector2 _playerVector;
+    public float Speed { get; set; }
+    public Transform CurrentTransform { get; set; }
 
-    private Rigidbody2D _rigidBody;
-
-    private float _horizontal, _vertical;
-
-    //Limits diagnol movement
-    private float _moveLimiter = 0.7f;
-
-    public float MoveSpeed;
-
-
-    void Start()
+    public void Move()
     {
-        _rigidBody = GetComponent<Rigidbody2D>();
+        _rigidbody2D.AddForce(_playerVector * Speed);
     }
-
-    void Update()
+    public PlayerMovement(Transform currentPoint, float speed, Rigidbody2D rigidbody2D)
     {
-        PlayerInput();
+        CurrentTransform = currentPoint;
+        _rigidbody2D = rigidbody2D;
+        Speed = speed;
+        _playerInput = new();
+        _playerInput.PlayerInput.Movement.started += OnMove;
+        _playerInput.PlayerInput.Movement.performed += OnMove;
+        _playerInput.PlayerInput.Movement.canceled += OnMove;
+        _playerInput.PlayerInput.Enable();
     }
-
-    void FixedUpdate()
+    private void OnMove(InputAction.CallbackContext context)
     {
-        Movement();
-    }
-
-
-
-
-
-
-
-    private void PlayerInput()
-    {
-        // Gives a value between -1 and 1
-        _horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        _vertical = Input.GetAxisRaw("Vertical"); // -1 is down
-    }
-
-
-    private void Movement()
-    {
-        if (CanMove)
-        {
-            if (_horizontal != 0 && _vertical != 0) // Check for diagonal movement
-            {
-                // limit movement speed diagonally, so you move at 70% speed
-                _horizontal *= _moveLimiter;
-                _vertical *= _moveLimiter;
-            }
-
-            Vector2 newVel = new Vector2(_horizontal * MoveSpeed, _vertical * MoveSpeed);
-
-            if (newVel != Vector2.zero)
-            {
-                _rigidBody.AddForce(newVel);
-            }
-        }
+        _playerVector = context.ReadValue<Vector2>();
     }
 }

@@ -16,6 +16,11 @@ public class PickupScrap : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] private LayerMask _scrapLayer, _environmentLayer;
 
+    [SerializeField]private KeyCode _pickupKey = KeyCode.F;
+    [SerializeField] private List<Transform> _scrapList = new List<Transform>();
+    [SerializeField] private Transform _player;
+    private Transform _grabbedScrap;
+    private bool _touchingScrap, _holdingScrap;
 
 
 
@@ -67,7 +72,7 @@ public class PickupScrap : MonoBehaviour
         _grabbedScrapList.Add(_scrapList[0]);
         SpringJoint2D _joint = _scrapList[0].gameObject.AddComponent<SpringJoint2D>();
         _joint.connectedBody = _player.GetComponent<Rigidbody2D>();
-        
+
         //Turns Layer's value from Binary to Numerical
         _scrapList[0].gameObject.layer = (int)Mathf.Log(_scrapLayer.value, 2);
 
