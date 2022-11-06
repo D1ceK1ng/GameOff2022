@@ -10,9 +10,9 @@ public class PickupScrap : MonoBehaviour
 
     public KeyCode PickupKey = KeyCode.E, DropKey = KeyCode.F;
 
-    [SerializeField] private List<Transform> _scrapList = new List<Transform>();
+    public List<Transform> ScrapList = new List<Transform>();
 
-    [SerializeField] private List<Transform> _grabbedScrapList = new List<Transform>();
+    public List<Transform> GrabbedScrapList = new List<Transform>();
     [SerializeField] private Transform _player;
     [SerializeField] private LayerMask _scrapLayer, _environmentLayer;
 
@@ -23,7 +23,7 @@ public class PickupScrap : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.TryGetComponent<Grabbable>(out Grabbable _grabbable))
-            _scrapList.Add(col.transform);
+            ScrapList.Add(col.transform);
         CheckBool();
 
     }
@@ -31,7 +31,7 @@ public class PickupScrap : MonoBehaviour
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.TryGetComponent<Grabbable>(out Grabbable _grabbable))
-            _scrapList.Remove(col.transform);
+            ScrapList.Remove(col.transform);
         CheckBool();
 
     }
@@ -39,7 +39,7 @@ public class PickupScrap : MonoBehaviour
     private void CheckBool()
     {
         //If list is != 0, touchingScrap is true
-        TouchingScrap = _scrapList.Count != 0;
+        TouchingScrap = ScrapList.Count != 0;
     }
 
 
@@ -64,15 +64,15 @@ public class PickupScrap : MonoBehaviour
         HoldingScrap = true;
         _amountOfScrapHeld++;
 
-        _grabbedScrapList.Add(_scrapList[0]);
-        SpringJoint2D _joint = _scrapList[0].gameObject.AddComponent<SpringJoint2D>();
+        GrabbedScrapList.Add(ScrapList[0]);
+        SpringJoint2D _joint = ScrapList[0].gameObject.AddComponent<SpringJoint2D>();
         _joint.connectedBody = _player.GetComponent<Rigidbody2D>();
 
         //Turns Layer's value from Binary to Numerical
-        _scrapList[0].gameObject.layer = (int)Mathf.Log(_scrapLayer.value, 2);
+        ScrapList[0].gameObject.layer = (int)Mathf.Log(_scrapLayer.value, 2);
 
 
-        _scrapList.Remove(_scrapList[0]);
+        ScrapList.Remove(ScrapList[0]);
     }
 
 
@@ -84,12 +84,12 @@ public class PickupScrap : MonoBehaviour
         if (_amountOfScrapHeld == 0)
             HoldingScrap = false;
 
-        int i = _grabbedScrapList.Count - 1;
+        int i = GrabbedScrapList.Count - 1;
 
-        Destroy(_grabbedScrapList[i].GetComponent<SpringJoint2D>());
-        _grabbedScrapList[i].gameObject.layer = (int)Mathf.Log(_environmentLayer.value, 2); ;
+        Destroy(GrabbedScrapList[i].GetComponent<SpringJoint2D>());
+        GrabbedScrapList[i].gameObject.layer = (int)Mathf.Log(_environmentLayer.value, 2); ;
 
 
-        _grabbedScrapList.Remove(_grabbedScrapList[i]);
+        GrabbedScrapList.Remove(GrabbedScrapList[i]);
     }
 }
