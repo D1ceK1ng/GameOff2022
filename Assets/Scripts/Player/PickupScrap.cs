@@ -22,7 +22,7 @@ public class PickupScrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.TryGetComponent<Grabbable>(out Grabbable _grabbable))
+        if (col.TryGetComponent<Rubbish>(out Rubbish _grabbable))
             ScrapList.Add(col.transform);
         CheckBool();
 
@@ -30,7 +30,7 @@ public class PickupScrap : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.TryGetComponent<Grabbable>(out Grabbable _grabbable))
+        if (col.TryGetComponent<Rubbish>(out Rubbish _grabbable))
             ScrapList.Remove(col.transform);
         CheckBool();
 

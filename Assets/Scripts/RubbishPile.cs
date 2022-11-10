@@ -6,8 +6,12 @@ public class RubbishPile : MonoBehaviour
     [SerializeField] private int _spawnAmount;
     private float _countdown = 3f;
     private bool _canDigUp;
-    
+    private PileSpawner _spawner;
 
+    private void Awake()
+    {
+        _spawner = new PileSpawner(_scrapPrefab,transform);
+    }
     private void Update()
     {
         if (_canDigUp)
@@ -25,25 +29,15 @@ public class RubbishPile : MonoBehaviour
 
         if (_countdown <= 0)
         {
-            SpawnScrap(_spawnAmount);
-            Destroy(gameObject);
+            _spawner.SpawnFromPile(_spawnAmount);
+            Destroy(gameObject);    
             _countdown = 3f;
         }
 
         _countdown -= Time.deltaTime;
     }
 
-    private void SpawnScrap(int spawnAmount)
-    {
-        for (int i = 0; i < spawnAmount; i++)
-        {
-            float minOffsetRange = 1f;
-            float maxOffsetRange = 5f;
-            Vector3 spawnOffset = new Vector3(Random.Range(minOffsetRange, maxOffsetRange), Random.Range(minOffsetRange, maxOffsetRange));
-            
-            Instantiate(_scrapPrefab, transform.position + spawnOffset, transform.rotation);
-        }
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
