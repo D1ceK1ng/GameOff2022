@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    private protected Player _player;
+    public Transform Target;
     [SerializeField] private protected float _speed = 1;
     [SerializeField] private protected float _damage = 3;
     [SerializeField] private protected Health _health;
@@ -16,10 +16,8 @@ public abstract class Enemy : MonoBehaviour
     public abstract float Damage { get; set; }
     public abstract Rigidbody2D Rigidbody { get; set; }
 
-    private void Awake()
-    {
-        _player = FindObjectOfType<Player>();
-    }
+
+
     private void FixedUpdate()
     {
         _movable.Move();

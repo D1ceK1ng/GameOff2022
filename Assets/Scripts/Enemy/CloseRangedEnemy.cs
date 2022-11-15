@@ -10,6 +10,6 @@ public class CloseRangedEnemy : Enemy
 
     private void OnEnable()
     {
-        _movable = new DirectedEnemyMovement(transform,_player.transform,Speed, _rigidbody);
+        _movable = new DirectedEnemyMovement(transform, base.Target, Speed, _rigidbody);
     }
 }

@@ -1469,7 +1469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2146946310
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1612,14 +1612,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CloseRangeEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489065, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489065, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3055664681759489068, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1663,34 +1655,6 @@ PrefabInstance:
     - target: {fileID: 3055664681759489068, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489070, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489070, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489070, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489071, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: _speed
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489074, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489074, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: m_LinearDrag
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055664681759489074, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
-      propertyPath: m_AngularDrag
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9b32e09a4794db45a4e7faa4bc377eb, type: 3}
