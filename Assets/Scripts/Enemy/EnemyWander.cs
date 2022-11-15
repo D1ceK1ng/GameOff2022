@@ -17,17 +17,12 @@ public class EnemyWander : MonoBehaviour
         InvokeRepeating("SetTarget", 0, _timeBetweenTicks);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void SetTarget()
     {
         if(_enemyScript.Target == null)
         {
-            //_enemyScript.Target = //Its a transform but this is a Vector3
+            _enemyScript.WanderPosition = GetRandomPoint();
         }
     }
 

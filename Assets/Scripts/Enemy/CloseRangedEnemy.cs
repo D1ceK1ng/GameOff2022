@@ -8,8 +8,25 @@ public class CloseRangedEnemy : Enemy
     public override float Damage { get => _damage; set => _damage = value; }
     public override Rigidbody2D Rigidbody { get => _rigidbody; set => _rigidbody = value; }
 
-    private void OnEnable()
+    [SerializeField] private float _tickSpeed = 1f;
+
+
+
+    private void Start()
     {
-        _movable = new DirectedEnemyMovement(transform, base.Target, Speed, _rigidbody);
+        //_movable = new DirectedEnemyMovement(transform, base.Target, Speed, _rigidbody);
+
+        _movable = gameObject.AddComponent<DirectedEnemyMovement>();
+        //InvokeRepeating("UpdateMovement", 0f, _tickSpeed);
+    }
+
+
+
+
+
+    private void UpdateMovement()
+    {
+        //_movable.SetVariables(transform, base.Target, Speed, _rigidbody);
+        Debug.Log("Run");
     }
 }

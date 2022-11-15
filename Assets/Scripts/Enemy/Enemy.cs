@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     public Transform Target;
+    public Vector3 WanderPosition;
     [SerializeField] private protected float _speed = 1;
     [SerializeField] private protected float _damage = 3;
     [SerializeField] private protected Health _health;
