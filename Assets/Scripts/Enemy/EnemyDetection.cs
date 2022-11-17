@@ -37,7 +37,7 @@ public class EnemyDetection : MonoBehaviour
 
     private void HasLineOfSight()
     {
-        if (_enemyScript.Target != null) return;
+        if (_enemyScript.Target != null || _targetList.Count == 0) return;
 
 
         foreach(Transform target in _targetList)
