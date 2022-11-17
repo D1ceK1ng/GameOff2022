@@ -104,6 +104,7 @@ public class Turret : MonoBehaviour
         GameObject _spawnedBullet = Instantiate(_bullet, _shootPoint.position, Quaternion.identity);
 
         _spawnedBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * _bulletSpeed, ForceMode2D.Impulse);
+        Destroy(_spawnedBullet, 4f);
         _timeBetweenShots = _startTimeBetweenShots;
         _amountOfAmmo --;
     }
@@ -115,7 +116,6 @@ public class Turret : MonoBehaviour
 
         //Debug.DrawRay(transform.position, _enemyList[0].transform.position - transform.position, Color.red);
         return Physics2D.Raycast(transform.position, (_enemyList[0].transform.position - transform.position).normalized).transform.TryGetComponent<Enemy>(out Enemy _enemyScript);
-        //RaycastHit2D _hit = Physics2D.Raycast(transform.position, (_enemyList[0].transform.position - transform.position).normalized);
     }
 
 

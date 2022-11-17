@@ -17,6 +17,14 @@ public abstract class Enemy : MonoBehaviour
     public abstract float Damage { get; set; }
     public abstract Rigidbody2D Rigidbody { get; set; }
 
+    public enum PriorityList
+    {
+        Player,
+        Rocket,
+        Turret
+    }
+
+    public PriorityList Priority;
 
 
     private void FixedUpdate()
