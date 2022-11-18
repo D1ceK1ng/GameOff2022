@@ -23,7 +23,7 @@ public abstract class Health : MonoBehaviour
 
     private void Awake()
     {
-        _maxHealth = CurrentHealth;
+        CurrentHealth = _maxHealth;
         OnSetMaxHealth?.Invoke();
     }
 
