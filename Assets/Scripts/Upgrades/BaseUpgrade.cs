@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class BaseUpgrade : AbstractUpgrade
@@ -7,56 +6,60 @@ public class BaseUpgrade : AbstractUpgrade
     private const int _priceInflation = 6;
     private int _currentUpgradeLevel = 0;
     private int _price = 20;
-    
-    private readonly UpgradeType _upgradeType = global::UpgradeType.BaseUpgrade;
+    private readonly UpgradeType _upgradeType = UpgradeType.BaseUpgrade;
+    private MainBase _mainBase;
+    private GameObject _scrapGeneratorPrefab;
 
     public override UpgradeType UpgradeType => _upgradeType;
 
-    public override bool GetCanUpgrade()
-    {
-        const int zeroScrapCount = 0;
-        return (ScrapCounter.Instance.ScrapCount - _price) >= zeroScrapCount && _currentUpgradeLevel < _maxUpgradeLevel;
-    }
+    protected override int Price { get => _price; set => _price = value; }
 
+
+    protected override int PriceInflation => _priceInflation;
+
+    protected override int CurrentUpgradeLevel { get => _currentUpgradeLevel; set => _currentUpgradeLevel = value; }
+
+    protected override int MaxUpgradeLevel => _maxUpgradeLevel;
+
+
+    public BaseUpgrade(GameObject scrapGeneratorPrefab, MainBase mainBase)
+    {
+        _scrapGeneratorPrefab = scrapGeneratorPrefab;
+        _mainBase = mainBase;
+    }
     public override void Upgrade()
     {
         if (GetCanUpgrade() == false) { return; }
 
         UpgradeBase();
         BuildScrapGenerator();
-
+        IncreaseUpgradeStats();
         
     }
 
     private void UpgradeBase()
     {
         //can't think of another method to do lader upgrading system that can easyli expand
-        int firstBaseUpgrade = 0;
-        int secondBaseUpgrade = 2;
-        if (_currentUpgradeLevel == firstBaseUpgrade)
+        int scrapGeneratorUpgrade = 0;
+        int incresedHealthAmount = 5;
+        if (_currentUpgradeLevel != scrapGeneratorUpgrade)
         {
-            Debug.Log("Upgrading base hp");
-            IncreaseUpgradeStats();
+            _mainBase.MainBaseHealth.IncreaseHealth(incresedHealthAmount);
+            
         }
-        else if(_currentUpgradeLevel == secondBaseUpgrade) 
-        {
-            Debug.Log("Increase base hp even more");
-        }
+        
+       
     }
 
-    private void IncreaseUpgradeStats()
-    {
-        _currentUpgradeLevel++;
-        _price += _priceInflation;
-    }
+    
 
     private void BuildScrapGenerator()
     {
         int scrapGeneratorUpgradeLevel = 1;
         if(_currentUpgradeLevel == scrapGeneratorUpgradeLevel)
         {
-            Debug.Log("Building scrap generator");
-            IncreaseUpgradeStats();
+            Object.Instantiate(_scrapGeneratorPrefab,new Vector3(_mainBase.transform.position.x + 5, _mainBase.transform.position.y - 4 ),_mainBase.transform.rotation);
+
         }
     }
 }

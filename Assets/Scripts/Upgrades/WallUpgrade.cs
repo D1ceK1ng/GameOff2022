@@ -10,26 +10,25 @@ public class WallUpgrade : AbstractUpgrade
     private readonly UpgradeType _upgradeType = UpgradeType.WallUpgrade;
     private GameObject _wallPrefab;
     private List<Transform> _spawnPoints;
-    private Wall _wall;
-    
+
+    protected override int Price { get => _price; set => _price = value; }
+    public override UpgradeType UpgradeType => _upgradeType;
+
+    protected override int PriceInflation => _priceInflation;
+
+    protected override int CurrentUpgradeLevel { get => _currentUpgradeLevel; set => _currentUpgradeLevel = value; }
+
+    protected override int MaxUpgradeLevel => _maxUpgradeLevel;
 
     public WallUpgrade(List<Transform> spawnPoints, GameObject wallPrefab)
     {
         _spawnPoints = spawnPoints;
         _wallPrefab = wallPrefab;
-        _wall = _wallPrefab.GetComponent<Wall>();
     }
-    public override UpgradeType UpgradeType { get => _upgradeType; }
-
-    public override bool GetCanUpgrade()
-    {
-        const int zeroScrapCount = 0;
-        return (ScrapCounter.Instance.ScrapCount - _price) >= zeroScrapCount;
-    }
-
+    
     public override void Upgrade()
     {
-        //if (GetCanUpgrade() == false) { return; }
+        if (GetCanUpgrade() == false) { return; }
         
 
         //Building walls or upgrading walls
@@ -44,14 +43,7 @@ public class WallUpgrade : AbstractUpgrade
         IncreaseUpgradeStats();
     }
 
-    private void IncreaseUpgradeStats()
-    {
-        _price += _priceInflation;
-        _currentUpgradeLevel++;
-
-        if (_currentUpgradeLevel > _maxUpgradeLevel)
-            _currentUpgradeLevel = _maxUpgradeLevel;
-    }
+    
 
     private void UpgradeWalls()
     {
@@ -59,7 +51,6 @@ public class WallUpgrade : AbstractUpgrade
         var walls = Object.FindObjectsOfType<Wall>();
         foreach (var wall in walls)
         {
-            Debug.Log(wall.WallHealth.CurrentHealth);
             wall.WallHealth.CurrentHealth += healthIncrease;
             
         }
@@ -70,7 +61,6 @@ public class WallUpgrade : AbstractUpgrade
         for (int i = 0; i < _spawnPoints.Count; i++)
         {
             Object.Instantiate(_wallPrefab, _spawnPoints[i].position, _spawnPoints[i].rotation);
-            Debug.Log("Lox");
         }
     }
 }

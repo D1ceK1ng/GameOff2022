@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: e6ed5735a08ba024dae600d862884986
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 178
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8725c20a897f43d48a4220a2ed0c03f8
+      internalID: 1461634006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 180
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e880a70aefcd94e9c1923224561d3d
+      internalID: 890917380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 178
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9eb479c824c3e4e8152f852423e596
+      internalID: 135829589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 179
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44eecf651bd53454cb68df6e848c02b8
+      internalID: -1846038575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 176
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790f3c96351be1b4ca384b4851ad2f88
+      internalID: -1553816783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 162
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f6de7b89a8c6547a095a78d3dfcaf1
+      internalID: -990532561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 162
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54586922a1187bd46b40c52a0207af41
+      internalID: -114536203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_7
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 163
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44924765a197084fbc2d8fe4c0f377e
+      internalID: 875993795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 146
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e54e86456c098146be0b1a9bbc41656
+      internalID: -1590055480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_9
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 98
+        width: 91
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574b0da90b05a1c45a097ba23b731b96
+      internalID: -471736197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_10
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 147
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b131f868bf2824480b3ba31df6c2dc
+      internalID: -1806463730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_11
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 147
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd900227a4f6de41a7a33b2014a0d72
+      internalID: 1138164826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_12
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 130
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f71b0b87a936e46aa075f9297f96d5
+      internalID: 2011697717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_13
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 130
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec143cf5fd57c245a93e4f1a3cd14d8
+      internalID: -1316974725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_14
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 130
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209b6fe82adb14e4db1831492b1b65b1
+      internalID: -631949421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_15
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83e50908e55f7e4a9fa2ee97c8e007a
+      internalID: 1794173228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_16
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 123
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83d1e680f900d14fb35c35c13a48158
+      internalID: 1443608387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_17
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 82
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f146b22f7d8a77045a599b8f3acf14ae
+      internalID: 2061885246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_18
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 115
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08bc4b4b5c52214ab65175c39dbb1e9
+      internalID: 981678782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_19
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 116
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7e357cde6d82d42977d771457a6493
+      internalID: -1537554802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_20
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 115
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e475d0a5e67d2447b137fb914958c7e
+      internalID: -2098897345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_21
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 99
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7271b25e04ab2c540b821544f5774c89
+      internalID: -1394230692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_22
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 99
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751d978b5bc358d40a1ad9611ba57073
+      internalID: 1206093215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_23
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 98
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ee37047c3a74343aeef75c5ea98959
+      internalID: -1079902264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_24
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 98
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f35ea3f6beb074aa68094567f7e9f1
+      internalID: -256388074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_25
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 50
+        width: 25
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3797c906ea39a304f909cef807a56415
+      internalID: -1028221950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53255c8bf53aad4485016fdaeb7bb61
+      internalID: 1901775049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_27
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 81
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06c2c4f28288794288fc34317811beb
+      internalID: 1465798213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_28
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 65
+        width: 76
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d1130a56aab034885842fc0a00e9b0
+      internalID: -59596973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_29
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 65
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fce639a6425ce54bbe10c71a9f2c8e6
+      internalID: 1564444714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_30
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 64
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564761fb638b00d46b41f384429a0593
+      internalID: 639793245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_31
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 64
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363fe3bc2ce8a1a4abc7ca3b3d66f97a
+      internalID: 228494380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 64
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbda12c84727ad14b910676c4ddc9484
+      internalID: -1583862850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_33
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 64
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca5e6affac0a38489a9c334d9352fdc
+      internalID: 498506987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_34
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 70
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd584f3799b8f94da8ac82b6508020f
+      internalID: -552842416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_35
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 65
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8c3da3e99709249bb3951e978567dc
+      internalID: -3050878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_36
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 51
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dec5c7b84f35a643a0205c8b23d4f05
+      internalID: 1670944737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_37
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad95698fcdc8684d8770d2797ec6906
+      internalID: -1792756761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_38
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 48
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf8f225d36f16a40b1669831faac348
+      internalID: -2010990104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_39
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 35
+        width: 56
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8dba8b7762181439fed8ee77e56bff
+      internalID: -880849774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_40
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 51
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295b5a5bbacd42d488ff82b79d560dec
+      internalID: 1912843096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_41
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 32
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f083112f33a843408381de677d39145
+      internalID: -154488546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_42
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 32
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2c8c9ab58ad04459998f5388c65ef8
+      internalID: 257032492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d53b29f6bb50842a91733d8da001b5
+      internalID: 44680666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_44
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a67c1d67da05044afce94c1df42a01
+      internalID: -881904932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_45
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 5
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa1bb5ea5c87604f9abdfd513e9cbe3
+      internalID: 1401230017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_46
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 0
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad76767a5ab4f394993f1ca95537ad8c
+      internalID: 526869119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_47
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 59
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0920336a99e07b4d966636505e580a6
+      internalID: -1715693135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_48
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 64
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7326a59addd37bf40a89212c7613c49c
+      internalID: -1235897535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi-Planet one Add ons v1_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 146
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24880dc868bbb1846ad8ba3b01c573c4
+      internalID: -27854574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SCi-fi-Planet one Add ons v1_24: -256388074
+      SCi-fi-Planet one Add ons v1_41: -154488546
+      SCi-fi-Planet one Add ons v1_49: -27854574
+      SCi-fi-Planet one Add ons v1_5: -990532561
+      SCi-fi-Planet one Add ons v1_39: -880849774
+      SCi-fi-Planet one Add ons v1_2: 135829589
+      SCi-fi-Planet one Add ons v1_9: -471736197
+      SCi-fi-Planet one Add ons v1_19: -1537554802
+      SCi-fi-Planet one Add ons v1_48: -1235897535
+      SCi-fi-Planet one Add ons v1_28: -59596973
+      SCi-fi-Planet one Add ons v1_13: -1316974725
+      SCi-fi-Planet one Add ons v1_30: 639793245
+      SCi-fi-Planet one Add ons v1_21: -1394230692
+      SCi-fi-Planet one Add ons v1_7: 875993795
+      SCi-fi-Planet one Add ons v1_36: 1670944737
+      SCi-fi-Planet one Add ons v1_4: -1553816783
+      SCi-fi-Planet one Add ons v1_40: 1912843096
+      SCi-fi-Planet one Add ons v1_37: -1792756761
+      SCi-fi-Planet one Add ons v1_3: -1846038575
+      SCi-fi-Planet one Add ons v1_33: 498506987
+      SCi-fi-Planet one Add ons v1_34: -552842416
+      SCi-fi-Planet one Add ons v1_17: 2061885246
+      SCi-fi-Planet one Add ons v1_35: -3050878
+      SCi-fi-Planet one Add ons v1_18: 981678782
+      SCi-fi-Planet one Add ons v1_32: -1583862850
+      SCi-fi-Planet one Add ons v1_31: 228494380
+      SCi-fi-Planet one Add ons v1_25: -1028221950
+      SCi-fi-Planet one Add ons v1_16: 1443608387
+      SCi-fi-Planet one Add ons v1_1: 890917380
+      SCi-fi-Planet one Add ons v1_11: 1138164826
+      SCi-fi-Planet one Add ons v1_20: -2098897345
+      SCi-fi-Planet one Add ons v1_10: -1806463730
+      SCi-fi-Planet one Add ons v1_14: -631949421
+      SCi-fi-Planet one Add ons v1_27: 1465798213
+      SCi-fi-Planet one Add ons v1_8: -1590055480
+      SCi-fi-Planet one Add ons v1_15: 1794173228
+      SCi-fi-Planet one Add ons v1_45: 1401230017
+      SCi-fi-Planet one Add ons v1_22: 1206093215
+      SCi-fi-Planet one Add ons v1_38: -2010990104
+      SCi-fi-Planet one Add ons v1_6: -114536203
+      SCi-fi-Planet one Add ons v1_12: 2011697717
+      SCi-fi-Planet one Add ons v1_26: 1901775049
+      SCi-fi-Planet one Add ons v1_42: 257032492
+      SCi-fi-Planet one Add ons v1_44: -881904932
+      SCi-fi-Planet one Add ons v1_23: -1079902264
+      SCi-fi-Planet one Add ons v1_47: -1715693135
+      SCi-fi-Planet one Add ons v1_0: 1461634006
+      SCi-fi-Planet one Add ons v1_43: 44680666
+      SCi-fi-Planet one Add ons v1_29: 1564444714
+      SCi-fi-Planet one Add ons v1_46: 526869119
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

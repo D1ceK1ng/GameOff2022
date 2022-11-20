@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class MainBase : MonoBehaviour
 {
-    [SerializeField] private UpgradeType _upgradeType;
+ 
     private MainBaseHealth _mainBaseHealth;
 
-    public  UnityEvent<UpgradeType> OnUpgradePerform;
+    public  UnityEvent OnUpgradePerform;
 
+    public MainBaseHealth MainBaseHealth { get => _mainBaseHealth; set => _mainBaseHealth = value; }
 
     private void Awake()
     {
@@ -23,11 +21,15 @@ public class MainBase : MonoBehaviour
         {
             UpgradeBase();
         }
+        if (Input.GetKeyDown(KeyCode.Q)) 
+        {
+            ScrapCounter.Instance.ScrapCount += 10;
+        }
     }
     public void UpgradeBase()
     {
         
-        OnUpgradePerform?.Invoke(_upgradeType);
+        OnUpgradePerform?.Invoke();
     }
 
 }

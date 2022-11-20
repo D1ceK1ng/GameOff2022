@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScrapCounter : MonoBehaviour
 {
 
     private RubbishCollector _rubbishCollector;
-    private int _scrapCount = 0;
-    public int ScrapCount { get => _scrapCount; set => _scrapCount = value; }
+    private float _scrapCount = 0;
+    public float ScrapCount { get => _scrapCount; set => _scrapCount = value; }
 
     public static ScrapCounter Instance { get; private set; } = null;
 
@@ -24,11 +22,15 @@ public class ScrapCounter : MonoBehaviour
         _rubbishCollector.OnRubbishRecycled += () => IncreaseScrapCount(_rubbishCollector.CurrentRubbishValue);
     }
 
-    private void IncreaseScrapCount(int value)
+    public void IncreaseScrapCount(float value)
     {
         ScrapCount += value;
-       
+
         Debug.Log(ScrapCount);
+    }
+    public void DecreaseScrapCount(float value)
+    {
+        ScrapCount -= value;
     }
 
 

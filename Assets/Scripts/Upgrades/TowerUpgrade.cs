@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerUpgrade : AbstractUpgrade
@@ -6,17 +7,21 @@ public class TowerUpgrade : AbstractUpgrade
     private const int _priceInflation = 4;
     private int _currentUpgradeLevel = 0;
     private int _price = 8;
-
     private readonly UpgradeType _upgradeType = UpgradeType.TowerUpgrade;
-
+    private GameObject _towerPrefab;
+    private List<Transform> _towerSpawnPoints;
     public override UpgradeType UpgradeType => _upgradeType;
-    public override bool GetCanUpgrade()
+   
+    protected override int Price { get => _price; set => _price = value; }
+    protected override int PriceInflation => _priceInflation;
+    protected override int CurrentUpgradeLevel { get => _currentUpgradeLevel; set => _currentUpgradeLevel = value; }
+    protected override int MaxUpgradeLevel => _maxUpgradeLevel;
+
+    public TowerUpgrade(GameObject towerPrefab, List<Transform> towerSpawnPoints)
     {
-
-        const int zeroScrapCount = 0;
-        return (ScrapCounter.Instance.ScrapCount - _price) >= zeroScrapCount && _currentUpgradeLevel < _maxUpgradeLevel;
+        _towerPrefab = towerPrefab;
+        _towerSpawnPoints = towerSpawnPoints;
     }
-
     public override void Upgrade()
     {
         if (GetCanUpgrade() == false) { return; }
@@ -26,29 +31,25 @@ public class TowerUpgrade : AbstractUpgrade
         {
             BuildTowers();
         }
-        else
+        else if(_currentUpgradeLevel < _maxUpgradeLevel) 
         {
             UpgradeTowers();
         }
         IncreaseUpgradeStats();
     }
 
-    private void IncreaseUpgradeStats()
-    {
-        _price += _priceInflation;
-        _currentUpgradeLevel++;
-
-        if (_currentUpgradeLevel > _maxUpgradeLevel)
-            _currentUpgradeLevel = _maxUpgradeLevel;
-    }
+    
 
     private void UpgradeTowers()
     {
-        Debug.Log("Upgradeing towers hp and texture ");
+        Debug.Log("Upgradeing tower parametres ");
     }
 
     private void BuildTowers()
     {
-        Debug.Log("Building Towers");
+        for (int i = 0; i < _towerSpawnPoints.Count; i++)
+        {
+            Object.Instantiate(_towerPrefab, _towerSpawnPoints[i].position, _towerSpawnPoints[i].rotation);
+        }
     }
 }

@@ -25,6 +25,10 @@ public class MainBaseHealth : Health
         CurrentHealth = _maxBaseHealth;
         
     }
+    public void IncreaseHealth(int amount)
+    {
+        CurrentHealth += amount;
+    }
    
     public override void TryApplyingDamage(float damage)
     {
